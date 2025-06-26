@@ -5,13 +5,13 @@
       <div class="col-xl-7 col-lg-8">
         <div class="section-tittle text-center mb-100">
           <span class="element">Nos Engagements</span>
-          <h2 style="font-style: italic;">Pourquoi Nous Choisir ? </h2>
+          <!-- <h2 style="font-style: italic;text-align: center;">Pourquoi Choisir <br> 2N Multi Service ? </h2> -->
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="row" style="margin-top: -30px;">
+      <div class="col-lg-3 col-md-6 col-sm-6" >
         <div class="single-cat">
           <div class="cat-icon">
             <img src="/assets/img/gallery/icon1.png" alt="">
