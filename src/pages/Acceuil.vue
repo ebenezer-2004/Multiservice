@@ -3,6 +3,7 @@
   <SingleAbout/>
   <SingleService/>
   <SingleService/>
+  <Feature/>
 </template>
 
 <script setup>

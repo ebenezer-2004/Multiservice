@@ -1,73 +1,73 @@
 <template>
-  <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container feature px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                        <h1 class="display-5 mb-5">Why Choose Us</h1>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
-                                        <img class="img-fluid" src="/img/icon/icon-7.png" alt="Icon">
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="text-primary mb-2">Trusted</p>
-                                        <h5 class="mb-0">Security</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
-                                        <img class="img-fluid" src="/img/icon/icon-10.png" alt="Icon">
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="text-primary mb-2">Quality</p>
-                                        <h5 class="mb-0">Services</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
-                                        <img class="img-fluid" src="/img/icon/icon-3.png" alt="Icon">
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="text-primary mb-2">Smart</p>
-                                        <h5 class="mb-0">Systems</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
-                                        <img class="img-fluid" src="/img/icon/icon-2.png" alt="Icon">
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="text-primary mb-2">24/7 Hours</p>
-                                        <h5 class="mb-0">Support</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="/img/feature.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-            </div>
+ <div class="categories-area section-padding40 gray-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-8">
+        <div class="section-tittle text-center mb-100">
+          <span class="element">Nos Engagements</span>
+          <h2 style="font-style: italic;">Pourquoi Nous Choisir ? </h2>
         </div>
+      </div>
     </div>
-</template>
 
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-cat">
+          <div class="cat-icon">
+            <img src="/assets/img/gallery/icon1.png" alt="">
+          </div>
+          <div class="cat-cap">
+            <h5><a href="services.html">Solutions Personnalisées</a></h5>
+            <p>Des prestations adaptées à chaque besoin pour une protection sur mesure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-cat">
+          <div class="cat-icon">
+            <img src="/assets/img/gallery/icon2.png" alt="">
+          </div>
+          <div class="cat-cap">
+            <h5><a href="services.html">Technologie de Pointe</a></h5>
+            <p>Nous intégrons les dernières innovations pour garantir une sécurité efficace et moderne.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-cat">
+          <div class="cat-icon">
+            <img src="/assets/img/gallery/icon3.png" alt="">
+          </div>
+          <div class="cat-cap">
+            <h5><a href="services.html">Surveillance 24/7</a></h5>
+            <p>Une présence constante pour assurer votre sérénité à toute heure du jour et de la nuit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-cat">
+          <div class="cat-icon">
+            <img src="/assets/img/gallery/icon4.png" alt="">
+          </div>
+          <div class="cat-cap">
+            <h5><a href="services.html">Accompagnement Complet</a></h5>
+            <p>De l’audit à la maintenance : un service professionnel à chaque étape.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</template>
 <script setup>
- 
+
 </script>
+
 
 <style  scoped>
 
