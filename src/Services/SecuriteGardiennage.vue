@@ -10,7 +10,7 @@
         <div class="service-article p-4 p-md-5">
           <h2 class="section-title">Sécurité & Gardiennage</h2>
           <img
-            src="https://placehold.co/800x500"
+            src="/assets/img/images/image-2.jpg" style="height: 100%;"
             alt="Agent de sécurité professionnel en uniforme bleu marine surveillant un site industriel avec une posture attentive et professionnelle"
             class="service-img"
           />
@@ -23,6 +23,24 @@
             de sécurité efficace. Chez 2N MULTI SERVICES, nous combinons
             expertise humaine et technologie pour une protection optimale.
           </p>
+          
+        <p style="text-align: justify">
+           <strong>2N MULTI SERVICE </strong> met à la disposition de ses clients, des agents de sécurité qualifiés, 
+          rigoureusement formés pour assurer la surveillance et la protection des sites sensibles
+           entre autres bureaux, entrepôts, hôtels, résidences, hôpitaux, chantiers, etc
+        </p>
+        <p style="text-align: justify">
+        Nos agents interviennent avec professionnalisme pour  :
+        </p>
+        <ul>
+          <li>•	Prévenir les risques (intrusions, vols, incidents) ;</li>
+          <li>•	Dissuader les comportements suspects ou malveillants ;</li>
+          <li>•	Réagir rapidement en cas d’anomalie ou de situation d’urgence.</li>
+        </ul> <br>
+        <p style="text-align: justify">
+         Qu’il s’agisse d’une présence statique, d’une ronde de surveillance ou d’un service de contrôle d’accès, 
+         nous garantissons une sécurité adaptée à vos besoins, selon les meilleurs standards du métier.
+        </p>
 
           <div class="row g-4 mt-4">
             <div class="col-md-6">

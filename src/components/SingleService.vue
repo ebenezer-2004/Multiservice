@@ -2,8 +2,8 @@
   <div class="gallery-area">
     <div class="container-fluid p-0 fix">
       <div class="row no-gutters">
-        <div class="col-xl-4 col-lg-4 col-md-6">
-          <div class="single-gallery text-center">
+        <div class="col-xl-4 col-lg-4 col-md-6"  >
+          <div class="single-gallery text-center" >
             <div
               class="gallery-img"
               style="background-image: url(assets/img/gallery/gallery1.png)"
@@ -20,7 +20,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="col-xl-4 col-lg-4 col-md-6"  >
           <div class="single-gallery no-margin text-center">
             <div
               class="gallery-img"
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="col-xl-4 col-lg-4 col-md-6" >
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
@@ -56,8 +56,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-6">
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6" style="margin-top:-30px">
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
@@ -74,7 +74,8 @@
               </div>
             </div>
           </div>
-        </div><div class="col-xl-4 col-lg-4 col-md-6">
+        </div> 
+       <div class="col-xl-4 col-lg-4 col-md-6" style="margin-top:-30px">
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
@@ -92,7 +93,8 @@
               </div>
             </div>
           </div>
-        </div><div class="col-xl-4 col-lg-4 col-md-6">
+        </div>
+         <div class="col-xl-4 col-lg-4 col-md-6" style="margin-top:-30px"> 
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
@@ -109,7 +111,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   </div>

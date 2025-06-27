@@ -1,6 +1,5 @@
 <template>
-<header>
-       
+<header> 
         <div class="header-area">
             <div class="main-header ">
                 <div class="header-top d-none d-lg-block">
@@ -51,7 +50,7 @@
                                     <ul>
                                         <li>
                                             <div class="nav-search search-switch">
-                                                <span class="fas fa-search"></span>
+                                                <!-- <span class="fas fa-search"></span> -->
                                             </div>
                                         </li>
                                     </ul>
@@ -59,7 +58,9 @@
                             </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+                                <div class="mobile_menu d-block d-lg-none">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,7 +71,6 @@
     </header>
 </template>
 <script lang="ts" setup>
-import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute();
@@ -79,12 +79,5 @@ const route = useRoute();
 
 
 <style scoped>
-.active{
-    color:red;
-}
 
-.navbar {
-  z-index: 1030;
-  position: sticky;
-}
 </style>

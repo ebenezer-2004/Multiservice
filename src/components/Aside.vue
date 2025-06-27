@@ -7,13 +7,13 @@
           <h4><i class="fas fa-shield-alt me-2"></i>Nos Services</h4>
           <ul class="list-unstyled">
             <li>
-              <a href="/service/gardiennage"
+              <a href="/service/securite-gardiennage"
                 ><i class="fas fa-user-shield me-2"></i> 2.1 Sécurité &
                 Gardiennage</a
               >
             </li>
             <li>
-              <a href="/service/evenementiel"
+              <a href="/service/surveillance-evenementielle"
                 ><i class="fas fa-calendar-alt me-2"></i> 2.2 Sécurité
                 Événementielle</a
               >
@@ -24,19 +24,19 @@
               >
             </li>
             <li>
-              <a href="/service/incendie"
+              <a href="/service/securite-incendie"
                 ><i class="fas fa-fire-extinguisher me-2"></i> 2.4 Sécurité
                 Incendie</a
               >
             </li>
             <li>
-              <a href="/service/intervention"
+              <a href="/service/securite-cynophile"
                 ><i class="fas fa-ambulance me-2"></i> 2.5 Sécurité Cynophile
                 </a
               >
             </li>
             <li>
-              <a href="/service/conseil"
+              <a href="/service/nettoyage-proprete"
                 ><i class="fas fa-clipboard-check me-2"></i> 2.6 Nettoyage &
                 Propreté</a
               >

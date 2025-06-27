@@ -18,7 +18,7 @@
         <a>Sites Sensibles & Stratégiques</a>
       </div>
     </div>
-    <span class="transparrent-btn active position-absolute">01. Sites Stratégiques</span>
+    <span class="transparrent-btn active position-absolute" style="color:white !important">01. Sites Stratégiques</span>
   </div>
 </div>
 

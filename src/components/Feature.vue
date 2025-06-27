@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-xl-7 col-lg-8">
         <div class="section-tittle text-center mb-100">
-          <span class="element">Nos Engagements</span>
+          <span class="element" >Nos Engagements</span>
           <!-- <h2 style="font-style: italic;text-align: center;">Pourquoi Choisir <br> 2N Multi Service ? </h2> -->
         </div>
       </div>

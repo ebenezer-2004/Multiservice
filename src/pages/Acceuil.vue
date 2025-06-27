@@ -3,9 +3,9 @@
   <SingleAbout/>
   <SingleService/>
   <Feature/>
-  <Fact/>
-  <SingleContact/>
-  <SingleBlog/>
+  <!-- <Fact/> -->
+  <SingleContact style="background:#fff"/>
+  <SingleBlog style="background:#fff"/>
 
 </template>
 
