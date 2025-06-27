@@ -6,7 +6,7 @@
           <div class="single-gallery text-center" >
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery1.png)"
+              style="background-image: url(assets/img/images/0F7A6458-Modifier.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -24,7 +24,7 @@
           <div class="single-gallery no-margin text-center">
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery2.png)"
+              style="background-image: url(assets/img/images/images-chien-2.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -42,7 +42,7 @@
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery3.png)"
+              style="background-image: url(assets/img/images/images-evenement-2.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -61,7 +61,7 @@
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery3.png)"
+              style="background-image: url(assets/img/images/images-incendie-2.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -79,7 +79,7 @@
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery3.png)"
+              style="background-image: url(assets/img/images/image-proprete-2.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -98,7 +98,7 @@
           <div class="single-gallery text-center">
             <div
               class="gallery-img"
-              style="background-image: url(assets/img/gallery/gallery3.png)"
+              style="background-image: url(assets/img/images/image-electronique-2.jpg)"
             ></div>
             <div class="thumb-content-box">
               <div class="thumb-content">
@@ -120,4 +120,7 @@
 <script setup>
 </script>
 
-<style scoped></style>
+<style scoped>
+
+
+</style>

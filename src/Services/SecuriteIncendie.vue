@@ -1,5 +1,5 @@
 <template>
-  <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+  <Banner title="Sécurité Incendie" image="/assets/img/images/images-incendie-2.jpg" />
   <section class="service-detail container py-5 mb-5">
     <div class="row">
       <!-- Navigation latérale -->

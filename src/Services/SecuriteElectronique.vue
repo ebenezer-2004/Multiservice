@@ -1,5 +1,5 @@
 <template>
-  <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+  <Banner title="Sécurité Electronique" image="/assets/img/images/image-electronique-2.jpg" />
   <section class="service-detail container py-5 mb-5">
     <div class="row">
       <!-- Navigation latérale -->
@@ -19,7 +19,7 @@
             style="font-size: 15px; text-align: justify"
             class="lead"
           >
-            <strong>Chez 2N MULTI SERVICES</strong> , nous allions technologie
+            <strong>Chez 2N MULTI SERVICE</strong> , nous allions technologie
             de pointe et expertise en sécurité pour garantir une protection
             optimale de vos biens, de vos infrastructures et de vos équipes.
           </p>
@@ -32,7 +32,7 @@
             de vos sites, 24 heures sur 24, 7 jours sur 7.
           </p>
           <p style="text-align: justify">
-           Pourquoi Choisir 2N MULTI SERVICES pour votre Sécurité Électronique ?
+          <strong> Pourquoi Choisir 2N MULTI SERVICES pour votre Sécurité Électronique ?</strong>
           </p>
           <ul>
             <li>•Solutions personnalisées adaptées à vos besoins spécifiques, pour une sécurité sur mesure.</li>
@@ -54,7 +54,7 @@
             <div class="col-md-6">
               <div class="service-card card h-100">
                 <div class="card-body">
-                  <h5>Vidéosurveillance Intelligente :</h5>
+                  <h5>Vidéo surveillance Intelligente</h5>
                   <p>
                     Caméras haute résolution pour une surveillance en temps
                     réel, jour et nuit. Détection de mouvement avancée et

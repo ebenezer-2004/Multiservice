@@ -1,5 +1,5 @@
 <template>
-  <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+  <Banner title="Nettoyage et Propreté" image="/assets/img/images/image-proprete-2.jpg" />
   <section class="service-detail container py-5 mb-5">
     <div class="row">
       <!-- Navigation latérale -->
@@ -120,7 +120,7 @@
               style="font-size: 15px; text-align: justify"
               class="lead"
             >
-             <strong>Pourquoi Choisir 2N MULTI SERVICES ?</strong>  <br> Intervention rapide et
+             <strong>Pourquoi Choisir 2N MULTI SERVICE ?</strong>  <br> Intervention rapide et
               efficace  Équipes qualifiées et équipements professionnels pour
               des résultats durables. Solutions sur-mesure adaptées à vos
               besoins spécifiques  Respect des normes d’hygiène et de sécurité

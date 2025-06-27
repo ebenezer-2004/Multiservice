@@ -1,5 +1,5 @@
 <template>
-  <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+  <Banner title="Surveillance Evénementielle" image="/assets/img/images/images-evenement-2.jpg" />
   <section class="service-detail container py-5 mb-5">
     <div class="row">
       <!-- Navigation latérale -->
@@ -27,7 +27,7 @@
           <p style="text-align: justify">
             La réussite d’un événement repose autant sur sa qualité
             organisationnelle que sur la sécurité des lieux, des participants et
-            du personnel. Avec <strong>2N MULTI SERVICES, </strong> vous
+            du personnel. Avec <strong>2N MULTI SERVICE, </strong> vous
             bénéficiez d’un service de surveillance événementielle professionnel
             et rassurant, adapté à tout type de manifestation.
           </p>

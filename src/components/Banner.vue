@@ -30,10 +30,14 @@ defineProps({
 </script>
 
 <style scoped>
+
+.section-bg2{
+  background-position: center;
+}
 .slider-area2 {
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: top center; 
   height: 60vh;
   display: flex;
   align-items: center;
@@ -42,12 +46,13 @@ defineProps({
   border-radius: 8px;
 }
 
+
 .slider-area2::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45); /* Dark overlay */
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 

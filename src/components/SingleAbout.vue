@@ -41,11 +41,11 @@
         <div class="col-xl-5 col-lg-6 col-md-9 offset-md-1 offset-sm-1">
           <div class="about-right-cap">
             <div class="about-right-img">
-              <img src="/assets/img/gallery/about1.png" alt="" />
+              <img src="/assets/img/images/images-about.jpg" alt=""style='height: 400px;' />
             </div>
             <div class="img-cap">
-              <span>20</span>
-              <p>Years of experience</p>
+              <span>+6</span>
+              <p>Services offerts</p>
             </div>
           </div>
         </div>

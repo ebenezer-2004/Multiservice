@@ -1,5 +1,5 @@
 <template>
-  <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+  <Banner title="Sécurité & Gardiennage" image="/assets/img/images/0F7A6458-Modifier.jpg" style="font-size: 50px;"/>
   <section class="service-detail container py-5 mb-5">
     <div class="row">
       <!-- Navigation latérale -->

@@ -1,5 +1,5 @@
 <template>
- <Banner title="Service Detail" image="/assets/img/hero/hero2.png" />
+ <Banner title="Sécurité Cynophile" image="/assets/img/images/images-chien-2.jpg" />
 <section class="service-detail container py-5 mb-5">
   <div class="row">
     <!-- Navigation latérale -->
@@ -22,7 +22,7 @@
 
         <p style="text-align: justify">
           Le binôme maître-chien constitue une solution redoutablement efficace pour sécuriser les sites sensibles,
-          vastes ou à haut risque. Chez <strong>2N MULTI SERVICES</strong>, nous mettons à votre disposition des équipes cynophiles
+          vastes ou à haut risque. Chez <strong>2N MULTI SERVICE</strong>, nous mettons à votre disposition des équipes cynophiles
           qualifiées, alliant l'expertise humaine à l'instinct canin.
         </p>
         <p style="text-align: justify">

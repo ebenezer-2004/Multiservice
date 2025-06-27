@@ -41,7 +41,7 @@
             <img src="/assets/img/gallery/icon3.png" alt="">
           </div>
           <div class="cat-cap">
-            <h5><a href="services.html">Surveillance 24/7</a></h5>
+            <h5><a >Surveillance 24/7</a></h5>
             <p>Une présence constante pour assurer votre sérénité à toute heure du jour et de la nuit.</p>
           </div>
         </div>
@@ -53,7 +53,7 @@
             <img src="/assets/img/gallery/icon4.png" alt="">
           </div>
           <div class="cat-cap">
-            <h5><a href="services.html">Accompagnement Complet</a></h5>
+            <h5><a >Accompagnement Complet</a></h5>
             <p>De l’audit à la maintenance : un service professionnel à chaque étape.</p>
           </div>
         </div>
