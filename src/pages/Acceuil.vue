@@ -2,7 +2,6 @@
   <Hero/>
   <SingleAbout/>
   <SingleService/>
-  <SingleService/>
   <Feature/>
   <Fact/>
   <SingleContact/>
