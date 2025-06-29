@@ -12,6 +12,8 @@ import SecuriteGardiennage from "@/Services/SecuriteGardiennage.vue";
 import SecuriteIncendie from "@/Services/SecuriteIncendie.vue";
 import SurveillanceEvenementielle from "@/Services/SurveillanceEvenementielle.vue";
 import NettoyageProprete from "@/Services/NettoyageProprete.vue";
+import Offre from "@/pages/Offres.vue";
+import DetailOffre from "@/pages/DetailEmploi.vue";
 
 const routes = [
   {
@@ -38,6 +40,16 @@ const routes = [
     path: '/services',
     name: 'Services',
     component: Services,
+  },
+   {
+    path: '/offres',
+    name: 'Offres',
+    component: Offre,
+  },
+  {
+    path: '/emploi/1',
+    name: 'Detail Emploi',
+    component: DetailOffre,
   },
    {
     path: '/blog/:id',

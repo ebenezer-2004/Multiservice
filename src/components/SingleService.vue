@@ -118,9 +118,42 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>
+.gallery-img {
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.gallery-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* noir transparent */
+  backdrop-filter: blur(2px); /* effet de flou doux */
+  z-index: 2;
+}
+
+.thumb-content-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 20px;
+  color: #fff;
+}
+.thumb-content-box h3,
+.thumb-content-box p,
+.thumb-content-box a {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
 
 
 </style>
