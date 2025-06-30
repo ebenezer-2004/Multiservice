@@ -29,15 +29,8 @@
               :key="job.id"
               class="job-item p-4 mb-4 animate__animated animate__fadeInUp"
             >
-              <div class="row g-4 align-items-center">
-                <div class="col-md-2 col-3">
-                  <img
-                    class="img-fluid border rounded"
-                    src="/img/com-logo-1.jpg"
-                    alt="logo"
-                    style="max-width: 100%; height: auto"
-                  />
-                </div>
+              <div class="row g-4 align-items-center justify-content-between" style="padding-left: 20px;">
+                
                 <div class="col-md-6 col-9">
                   <div class="text-start" style="text-align: left">
                     <h5 class="mb-3" style="font-size: 20px">
@@ -46,15 +39,12 @@
                     <div
                       class="small text-muted"
                       style="font-size: 15px"
-                      v-html="job.description"
+                      v-html="truncateHtml(job.description, 100)"
                     ></div>
                   </div>
                 </div>
                 <div class="col-md-4 text-md-end text-start">
-                  <a
-                    class="btn btn-primary mb-2"
-                    :href="`/emploi/${job.id}`"
-                  >
+                  <a class="btn btn-primary mb-2" :href="`/emploi/${job.id}`">
                     Postuler
                   </a>
                   <br />
@@ -70,8 +60,16 @@
             <div class="d-flex justify-content-center mt-4">
               <nav>
                 <ul class="pagination">
-                  <li class="page-item" :class="{ disabled: currentPage === 1 }">
-                    <a class="page-link" href="#" @click.prevent="goToPage(currentPage - 1)">Précédent</a>
+                  <li
+                    class="page-item"
+                    :class="{ disabled: currentPage === 1 }"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      @click.prevent="goToPage(currentPage - 1)"
+                      >Précédent</a
+                    >
                   </li>
                   <li
                     v-for="page in totalPages"
@@ -79,10 +77,23 @@
                     class="page-item"
                     :class="{ active: currentPage === page }"
                   >
-                    <a class="page-link" href="#" @click.prevent="goToPage(page)">{{ page }}</a>
+                    <a
+                      class="page-link"
+                      href="#"
+                      @click.prevent="goToPage(page)"
+                      >{{ page }}</a
+                    >
                   </li>
-                  <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-                    <a class="page-link" href="#" @click.prevent="goToPage(currentPage + 1)">Suivant</a>
+                  <li
+                    class="page-item"
+                    :class="{ disabled: currentPage === totalPages }"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      @click.prevent="goToPage(currentPage + 1)"
+                      >Suivant</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -155,7 +166,16 @@ const decodeHtml = (html) => {
   txt.innerHTML = html;
   return txt.value;
 };
+
+// Tronquer le texte nettoyé
+const truncateHtml = (html, limit) => {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  const text = div.textContent || div.innerText || "";
+  return text.length > limit ? text.substring(0, limit) + "..." : text;
+};
 </script>
+
 
 <style scoped>
 .job-item {

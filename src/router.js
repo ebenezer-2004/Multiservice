@@ -47,8 +47,9 @@ const routes = [
     component: Offre,
   },
   {
-    path: '/emploi/1',
+    path: '/emploi/:id',
     name: 'Detail Emploi',
+     props:true,
     component: DetailOffre,
   },
    {

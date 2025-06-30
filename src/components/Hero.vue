@@ -1,14 +1,14 @@
 <template>
   <div class="video-container">
     <video autoplay muted loop playsinline class="background-video">
-      <source src="/assets/video/2n-video.mp4" type="video/mp4" playbackRate="2" />
+      <source src="/assets/video/2n-video.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas la lecture de vidéos HTML5.
     </video>
 
-    <div class="text-overlay" >
-      <div class="text-content" style="backdrop-filter: blur(5px);padding: 30px;">
+    <div class="text-overlay">
+      <div class="text-content" style="backdrop-filter: blur(5px); padding: 30px;">
         <h1 class="hero-title">
-          2N Multi Service — L’expertise au service de votre tranquillité.
+         <strong>2N Multi Service </strong> , l’expertise au service de votre tranquillité.
         </h1>
         <p class="hero-subtitle">
           Votre sécurité, notre mission. Chez 2N Multi Service, nous allions
@@ -33,13 +33,15 @@
 </template>
 
 <script>
-import Hero from '@/components/Hero.vue'
-document.addEventListener('DOMContentLoaded', function () {
+export default {
+  name: 'HeroVideoSection',
+  mounted() {
     const video = document.querySelector('.background-video');
     if (video) {
       video.playbackRate = 2;
     }
-  });
+  }
+}
 </script>
 
 <style scoped>
@@ -71,14 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem;
-  /* backdrop-filter: blur(5px); */
 }
 
 .text-content {
   max-width: 900px;
   padding: 1rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title,
+.hero-subtitle,
+.header-info-right {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-title {
@@ -87,12 +107,18 @@ document.addEventListener('DOMContentLoaded', function () {
   font-weight: bold;
   margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation-delay: 0.2s;
 }
 
 .hero-subtitle {
   color: #fff;
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  animation-delay: 0.5s;
+}
+
+.header-info-right {
+  animation-delay: 0.8s;
 }
 
 .scroll-indicator {
@@ -115,10 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
@@ -132,11 +158,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 }
 </style>
