@@ -1,9 +1,9 @@
 <template>
-<Banner title="A propos" image="/assets/img/hero/hero2.png"/>
+<Banner title="A propos" image="/assets/img/images/images-about.jpg"/>
 <SingleAbout/>
 <Fact/>
 <Feature/>
-<SingleContact/>
+<SingleContact style="background-color: #fff;"/>
 </template>
 
 <script setup>

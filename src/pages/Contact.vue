@@ -1,6 +1,6 @@
 <template>
-  <Banner title="Contact"  image="/assets/img/hero/hero2.png" />
-  <section class="contact-section">
+  <Banner title="Contact" image="/assets/img/images/images-about.jpg" />
+  <section class="contact-section" style="background-color: #fff;">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4">
         <div
@@ -1524,32 +1524,23 @@
             </table>
           </div>
         </div>
-
       </div>
       <div class="row">
         <div class="col-12">
-          <h2 class="contact-title">Get in Touch</h2>
+          <h2 class="contact-title">Laisser un message</h2>
         </div>
         <div class="col-lg-8">
-          <form
-            class="form-contact contact_form"
-            action="contact_process.php"
-            method="post"
-            id="contactForm"
-            novalidate="novalidate"
-          >
+          <form @submit.prevent="submitForm">
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
                   <textarea
                     class="form-control w-100"
-                    name="message"
-                    id="message"
+                    v-model="message"
                     cols="30"
                     rows="9"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter Message'"
-                    placeholder=" Enter Message"
+                    placeholder="Enter Message"
+                    style="font-size: 15px !important;"
                   ></textarea>
                 </div>
               </div>
@@ -1557,11 +1548,9 @@
                 <div class="form-group">
                   <input
                     class="form-control valid"
-                    name="name"
-                    id="name"
+                    v-model="name"
+                     style="height: 50px;font-size: 15px !important;"
                     type="text"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter your name'"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -1569,12 +1558,10 @@
               <div class="col-sm-6">
                 <div class="form-group">
                   <input
+                   style="height: 50px;font-size: 15px !important;"
                     class="form-control valid"
-                    name="email"
-                    id="email"
+                    v-model="email"
                     type="email"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email address'"
                     placeholder="Email"
                   />
                 </div>
@@ -1582,21 +1569,21 @@
               <div class="col-12">
                 <div class="form-group">
                   <input
+                  style="height: 50px;font-size: 15px !important;"
                     class="form-control"
-                    name="subject"
-                    id="subject"
+                    v-model="telephone"
                     type="text"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter Subject'"
-                    placeholder="Enter Subject"
+                    placeholder="Phone (optional)"
+                    
                   />
                 </div>
               </div>
             </div>
             <div class="form-group mt-3">
-              <button type="submit" class="button button-contactForm boxed-btn">
-                Send
+              <button type="submit"  style="background-color: red;color: #fff !important;" class="button button-contactForm boxed-btn">
+                Envoyer
               </button>
+              <p :style="{ color: formMessageColor }">{{ formMessage }}</p>
             </div>
           </form>
         </div>
@@ -1629,38 +1616,79 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import Banner from "@/components/Banner.vue";
-function initMap() {
-  var uluru = {
-    lat: -25.363,
-    lng: 131.044,
+
+// Données du formulaire
+const name = ref("");
+const email = ref("");
+const telephone = ref("");
+const message = ref("");
+const formMessage = ref("");
+const formMessageColor = ref("");
+
+// Soumission du formulaire
+async function submitForm() {
+  formMessage.value = "";
+  formMessageColor.value = "";
+
+  const formData = {
+    name: name.value,
+    email: email.value,
+    telephone: telephone.value,
+    message: message.value,
   };
-  var grayStyles = [
+
+  try {
+    const response = await fetch("http://localhost:8000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      if (data.errors) {
+        const messages = Object.values(data.errors).flat().join(" ");
+        formMessage.value = messages;
+        formMessageColor.value = "red";
+      } else {
+        formMessage.value = "Une erreur est survenue.";
+        formMessageColor.value = "red";
+      }
+    } else {
+      formMessage.value = "Message envoyé avec succès !";
+      formMessageColor.value = "green";
+      name.value = "";
+      email.value = "";
+      telephone.value = "";
+      message.value = "";
+    }
+  } catch (error) {
+    formMessage.value = "Erreur de connexion au serveur.";
+    formMessageColor.value = "red";
+  }
+}
+
+// Carte Google Maps
+function initMap() {
+  const uluru = { lat: -25.363, lng: 131.044 };
+  const grayStyles = [
     {
       featureType: "all",
-      stylers: [
-        {
-          saturation: -90,
-        },
-        {
-          lightness: 50,
-        },
-      ],
+      stylers: [{ saturation: -90 }, { lightness: 50 }],
     },
     {
       elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#ccdee9",
-        },
-      ],
+      stylers: [{ color: "#ccdee9" }],
     },
   ];
-  var map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -31.197,
-      lng: 150.744,
-    },
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -31.197, lng: 150.744 },
     zoom: 9,
     styles: grayStyles,
     scrollwheel: false,

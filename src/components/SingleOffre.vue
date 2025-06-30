@@ -1,35 +1,31 @@
 <template>
-  <Banner title="Emploi" />
+  <Banner title="Emploi" image="/assets/img/images/images-about.jpg" />
   <div class="container-xxl py-5" style="background: #fff">
     <div class="container">
       <h1 class="text-center mb-5 wow animate__animated animate__fadeInUp">
-        <!-- Liste des Offres -->
+        Liste des Offres
       </h1>
 
       <!-- Search Bar -->
-      <div class="row  align-items-center mb-4">
-        <!-- Champ de recherche -->
+      <div class="row align-items-center mb-4">
         <div class="col-12 col-md-6 mb-3 mb-md-0">
           <div class="input-group">
             <input
               type="text"
               class="form-control search-input custom-input"
-              placeholder="Rechercher un poste ou une entreprise..."
+              placeholder="Rechercher un poste..."
               v-model="searchQuery"
             />
           </div>
         </div>
-
-       
       </div>
 
       <!-- Tabs Navigation -->
       <div class="tab-class text-center mt-5">
-        <!-- Tab Content -->
         <div class="tab-content">
           <div id="tab-1" class="tab-pane fade show active p-0">
             <div
-              v-for="job in filteredJobs"
+              v-for="job in paginatedJobs"
               :key="job.id"
               class="job-item p-4 mb-4 animate__animated animate__fadeInUp"
             >
@@ -37,43 +33,62 @@
                 <div class="col-md-2 col-3">
                   <img
                     class="img-fluid border rounded"
-                    :src="job.logo"
+                    src="/img/com-logo-1.jpg"
                     alt="logo"
                     style="max-width: 100%; height: auto"
                   />
                 </div>
                 <div class="col-md-6 col-9">
                   <div class="text-start" style="text-align: left">
-                    <h5 class="mb-5" style="font-size: 20px">
+                    <h5 class="mb-3" style="font-size: 20px">
                       {{ job.title }}
                     </h5>
-
-                    <div class="small text-muted" style="font-size: 15px">
-                      <i
-                        class="fa fa-map-marker-alt text-primary me-1"
-                        style="font-size: 20px"
-                      ></i>
-                      {{ job.location }} |
-                      <i class="far fa-clock text-primary me-1"></i>
-                      {{ job.type }} |
-                      <i class="far fa-money-bill-alt text-primary me-1"></i>
-                      {{ job.salary }}
-                    </div>
+                    <div
+                      class="small text-muted"
+                      style="font-size: 15px"
+                      v-html="job.description"
+                    ></div>
                   </div>
                 </div>
                 <div class="col-md-4 text-md-end text-start">
-                  <a class="btn btn-primary mb-2" href="/emploi/1"
-                    >Postuler</a
-                  ><br />
-                  <small class="text-muted" style="font-size: 15px"
-                    ><i class="far fa-calendar-alt text-primary me-1"></i> Date
-                    limite : {{ job.dateLine }}</small
+                  <a
+                    class="btn btn-primary mb-2"
+                    :href="`/emploi/${job.id}`"
                   >
+                    Postuler
+                  </a>
+                  <br />
+                  <small class="text-muted" style="font-size: 15px">
+                    <i class="far fa-calendar-alt text-primary me-1"></i>
+                    Date limite : {{ job.dateLine }}
+                  </small>
                 </div>
               </div>
             </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-4">
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                    <a class="page-link" href="#" @click.prevent="goToPage(currentPage - 1)">Précédent</a>
+                  </li>
+                  <li
+                    v-for="page in totalPages"
+                    :key="page"
+                    class="page-item"
+                    :class="{ active: currentPage === page }"
+                  >
+                    <a class="page-link" href="#" @click.prevent="goToPage(page)">{{ page }}</a>
+                  </li>
+                  <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+                    <a class="page-link" href="#" @click.prevent="goToPage(currentPage + 1)">Suivant</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Fin pagination -->
           </div>
-          <!-- Tabs tab-2 et tab-3 peuvent être ajoutés dynamiquement si besoin -->
         </div>
       </div>
     </div>
@@ -82,87 +97,68 @@
 
 <script setup>
 import Banner from "@/components/Banner.vue";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 
-const jobs = ref([
-  {
-    id: 1,
-    title: "Développeur Vue.js",
-    location: "Paris, France",
-    type: "Full Time",
-    salary: "3000€ - 5000€",
-    logo: "/img/com-logo-1.jpg",
-    applyLink: "#",
-    dateLine: "01 Juil. 2025",
-  },
-  {
-    id: 2,
-    title: "UI/UX Designer",
-    location: "Lomé, Togo",
-    type: "Featured",
-    salary: "400.000 - 800.000 FCFA",
-    logo: "/img/com-logo-2.jpg",
-    applyLink: "#",
-    dateLine: "05 Juil. 2025",
-  },
-  {
-    id: 3,
-    title: "Développeur Laravel",
-    location: "Abidjan, Côte d’Ivoire",
-    type: "Part Time",
-    salary: "250.000 - 400.000 FCFA",
-    logo: "/img/com-logo-3.jpg",
-    applyLink: "#",
-    dateLine: "10 Juil. 2025",
-  },
-  {
-    id: 4,
-    title: "Analyste Données",
-    location: "Remote",
-    type: "Full Time",
-    salary: "5000€ / mois",
-    logo: "/img/com-logo-4.jpg",
-    applyLink: "#",
-    dateLine: "15 Juil. 2025",
-  },
-  {
-    id: 5,
-    title: "Community Manager",
-    location: "Cotonou, Bénin",
-    type: "Featured",
-    salary: "200.000 - 300.000 FCFA",
-    logo: "/img/com-logo-5.jpg",
-    applyLink: "#",
-    dateLine: "20 Juil. 2025",
-  },
-]);
-
+const jobs = ref([]);
 const searchQuery = ref("");
-const selectedFilter = ref("");
 const currentPage = ref(1);
-const itemsPerPage = 10;
+const itemsPerPage = 5;
 
-const filteredJobs = computed(() => {
-  return jobs.value
-    .filter((job) => {
-      const matchTitle = job.title
-        .toLowerCase()
-        .includes(searchQuery.value.toLowerCase());
-      const matchType = selectedFilter.value
-        ? job.type.toLowerCase() === selectedFilter.value.toLowerCase()
-        : true;
-      return matchTitle && matchType;
-    })
-    .slice(
-      (currentPage.value - 1) * itemsPerPage,
-      currentPage.value * itemsPerPage
-    );
+// Charger les offres depuis l'API
+const fetchJobs = async () => {
+  try {
+    const response = await fetch("http://localhost:8000/api/job-offers");
+    const data = await response.json();
+    jobs.value = data.offres.map((offre) => ({
+      id: offre.id,
+      title: offre.title,
+      description: decodeHtml(offre.description),
+      dateLine: new Date(offre.datefin).toLocaleDateString("fr-FR", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }),
+    }));
+  } catch (error) {
+    console.error("Erreur lors du chargement des offres :", error);
+  }
+};
+
+onMounted(fetchJobs);
+
+// Recherche
+const filteredJobs = computed(() =>
+  jobs.value.filter((job) =>
+    job.title.toLowerCase().includes(searchQuery.value.toLowerCase())
+  )
+);
+
+// Pagination
+const totalPages = computed(() =>
+  Math.ceil(filteredJobs.value.length / itemsPerPage)
+);
+
+const paginatedJobs = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  return filteredJobs.value.slice(start, start + itemsPerPage);
 });
+
+const goToPage = (page) => {
+  if (page >= 1 && page <= totalPages.value) {
+    currentPage.value = page;
+  }
+};
+
+// Décoder les entités HTML dans la description
+const decodeHtml = (html) => {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+};
 </script>
 
 <style scoped>
 .job-item {
-  /* border: 1px solid #dee2e6; */
   border-radius: 8px;
   background-color: #fdfdfd;
   transition: all 0.3s ease;
@@ -171,7 +167,6 @@ const filteredJobs = computed(() => {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
-
 .text-muted {
   text-align: left;
   align-items: center;
@@ -187,14 +182,12 @@ const filteredJobs = computed(() => {
 .form-select:focus {
   box-shadow: none;
 }
-
 .btn-primary {
   border-radius: 25px;
   padding: 10px 20px;
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
-
 .tab-class ul.nav {
   border-bottom: 2px solid #e0e0e0;
 }
@@ -208,7 +201,6 @@ const filteredJobs = computed(() => {
   background-color: transparent;
   color: #0d6efd;
 }
-
 .custom-input {
   height: 48px;
   max-width: 100%;
@@ -219,25 +211,9 @@ const filteredJobs = computed(() => {
   border: 1px solid #ced4da;
   transition: border-color 0.3s ease;
 }
-
-.custom-input,
-.custom-select {
-  height: 48px;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-}
-
-
 .custom-input:focus {
   border-color: #0d6efd;
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
-}
-
-.custom-select {
-  height: 48px;
-  border-radius: 8px;
-  font-size: 16px;
 }
 </style>

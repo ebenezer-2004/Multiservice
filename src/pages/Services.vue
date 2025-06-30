@@ -1,5 +1,6 @@
 <template>
-   <Banner title="Nos services"  image="/assets/img/hero/hero2.png"/>
+   <Banner title="Nos services"  image="/assets/img/images/images-about.jpg"/>
+   
     <Feature/>
    <SingleService/>
    <singleContact/>

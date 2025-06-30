@@ -1,69 +1,29 @@
 <template>
   <div class="slider-area position-relative">
     <div class="slider-active">
-      <!-- Single Slider -->
-      <div class="single-slider slider-height d-flex align-items-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
-              <div class="hero__caption">
-                <h1 data-animation="fadeInLeft" data-delay="0.2s">
-                  Market leading <span>Manufacturer</span>
-                </h1>
-                <p data-animation="fadeInLeft" data-delay="0.4s">
-                  The right candidate may exist, but talented people
-                </p>
-                <a
-                  href="#"
-                  class="btn hero-btn"
-                  data-animation="fadeInLeft"
-                  data-delay="0.7s"
-                  >Learn More <i class="ti-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Single Slider -->
-      <div class="single-slider slider-height d-flex align-items-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
-              <div class="hero__caption">
-                <h1 data-animation="fadeInLeft" data-delay="0.2s">
-                  Market leading <span>Manufacturer</span>
-                </h1>
-                <p data-animation="fadeInLeft" data-delay="0.4s">
-                  The right candidate may exist, but talented people
-                </p>
-                <a
-                  href="#"
-                  class="btn hero-btn"
-                  data-animation="fadeInLeft"
-                  data-delay="0.7s"
-                  >Learn More <i class="ti-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Video icon -->
-    <div class="video-icon">
-      <a
-        class="popup-video btn-icon"
-        href="https://www.youtube.com/watch?v=up68UAfH0d0"
-        data-animation="bounceIn"
-        data-delay=".4s"
-        ><i class="fas fa-play"></i
-      ></a>
+      <video autoplay muted loop playsinline class="background-video">
+        <source src="/assets/video/2n-video.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+      </video>
     </div>
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style></style>
+<style scoped>
+.slider-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>
