@@ -27,15 +27,29 @@
                 <img
                   :src="`http://localhost:8000/storage/${article.image}`"
                   alt="Image blog"
+                  class="img-fluid rounded"
                 />
               </div>
-              <div class="blog-cap">
-                <p>{{ formatDate(article.created_at) }}</p>
-                <h3>
-                  <a :href="`/blog/${article.id}`">{{ article.titre }}</a>
+              <div class="blog-cap mt-3">
+                <p class="text-muted mb-1">{{ formatDate(article.created_at) }}</p>
+                <h3 class="h5">
+                  <a :href="`/blog/${article.id}`" class="text-dark text-decoration-none">
+                    {{ article.titre }}
+                  </a>
                 </h3>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Message si aucun article -->
+        <div class="col-12" v-if="articles.length === 0" style="margin-top: -50px;">
+          <div class="alert alert-info text-center py-5 shadow-sm rounded">
+            <h4 class="mb-3">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              Aucun article disponible pour le moment
+            </h4>
+            <p class="mb-0">Revenez bientôt pour découvrir nos dernières actualités et interventions.</p>
           </div>
         </div>
       </div>
@@ -72,5 +86,8 @@ onMounted(fetchArticles)
 </script>
 
 <style scoped>
-/* Tu peux ajouter ici des styles personnalisés si besoin */
+.home-blog-single img {
+  max-height: 220px;
+  object-fit: cover;
+}
 </style>

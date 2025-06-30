@@ -45,11 +45,11 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle mb-50">
-                                <h4>Newsletter</h4>
-                                <p>Abonner vous a notre newsletter pour recevoir nos dernieres nouvelles</p>
+                                <h4></h4>
+                                <p>Chez 2N MULTI SERVICES, nous allions technologie de pointe et expertise en sécurité pour garantir une protection optimale de vos biens, de vos infrastructures et de vos équipes. </p>
                             </div>
                             <!-- Form -->
-                            <div class="footer-form">
+                            <!-- <div class="footer-form">
                                 <div id="mc_embed_signup">
                                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
                                         <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
@@ -61,7 +61,7 @@
                                         <div class="mt-10 info"></div>
                                     </form>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
