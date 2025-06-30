@@ -175,6 +175,7 @@
 </template>
 
 <script setup>
+import { API_BASE_URL } from '@/config/api.js'
 import { ref, computed, onMounted } from "vue"
 import Banner from "@/components/Banner.vue"
 
