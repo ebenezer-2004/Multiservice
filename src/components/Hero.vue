@@ -1,12 +1,12 @@
 <template>
   <div class="video-container">
     <video autoplay muted loop playsinline class="background-video">
-      <source src="/assets/video/2n-video.mp4" type="video/mp4" />
+      <source src="/assets/video/2n-video.mp4" type="video/mp4" playbackRate="2" />
       Votre navigateur ne supporte pas la lecture de vidéos HTML5.
     </video>
 
-    <div class="text-overlay" style="backdrop-filter: blur(5px);">
-      <div class="text-content">
+    <div class="text-overlay" >
+      <div class="text-content" style="backdrop-filter: blur(5px);padding: 30px;">
         <h1 class="hero-title">
           2N Multi Service — L’expertise au service de votre tranquillité.
         </h1>
@@ -33,9 +33,13 @@
 </template>
 
 <script>
-export default {
-  name: 'HeroVideoSection',
-}
+import Hero from '@/components/Hero.vue'
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.background-video');
+    if (video) {
+      video.playbackRate = 2;
+    }
+  });
 </script>
 
 <style scoped>
@@ -67,9 +71,9 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   padding: 1rem;
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
 }
 
 .text-content {
